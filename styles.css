@@ -1,6 +1,11 @@
+
 .button_section {
     display: flex;
     gap: 30px;
+}
+
+body {
+    background-color: #F3F5FC !important;
 }
 
 .button_encriptar {
@@ -11,6 +16,7 @@
     background-color: #0A3871;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .button_desencriptar {
@@ -20,7 +26,8 @@
     color: #0A3871;;
     background-color: #D8DFE8;
     outline: none;
-    border: 1px solid #0A3871;;
+    border: 1px solid #0A3871;
+    cursor: pointer;
 }
 
 .content {
@@ -76,6 +83,26 @@
     color: #0A3871;
     outline: none;
     border: none;
+    background-color: #F3F5FC;
+    resize: none;
+}
+
+.message_section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 24px;
+}
+
+.message_section > button {
+    height: 67px;
+    width: 336px;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
 }
 
 ::placeholder {
@@ -83,6 +110,41 @@
 }
 
 .second_section {
-    border: 1px solid black;
+    border-radius: 36px;
     width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    box-shadow: 0px 5px 5px 5px #e9eaeb;
+    animation: sombraAnimacion 2s infinite;
+    color: #495057;
+    background-color: white;
+}
+
+@keyframes sombraAnimacion {
+    0% {
+        box-shadow: 0px 5px 5px 5px #e9eaeb;
+    }
+    50% {
+        box-shadow: 0px 10px 10px 10px #e9eaeb;
+    }
+    100% {
+        box-shadow: 0px 5px 5px 5px #e9eaeb;
+    }
+}
+
+.not_found_message {
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    gap: 20px;
+}
+
+.not_found_message > h2 {
+    font-size: 24px;
+}
+
+.not_found_message > p {
+    font-size: 16px;
 }

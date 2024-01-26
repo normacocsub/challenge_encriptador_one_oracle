@@ -1,12 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleAnimation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src="script.js"></script>
+
 </head>
+
 <body>
     <div class="content">
         <section class="first_section">
@@ -14,16 +17,80 @@
                 <img src="img/logo.svg" alt="alura">
             </div>
             <div class="input_section">
-                <textarea class="input" type="text" placeholder="Ingrese el texto aqui"></textarea>
-                <p class="p_section"><span class="icon"><i class="fas fa-exclamation"></i> </span>Solo letras minusculas sin acentos</p>
+                <textarea id="texto_textarea" class="input" type="text" placeholder="Ingrese el texto aqui"></textarea>
+                <p class="p_section"><span class="icon"><i class="fas fa-exclamation"></i> </span>Solo letras minusculas
+                    sin acentos</p>
             </div>
 
             <div class="button_section">
-                <button class="button_encriptar">Encriptar</button>
+                <button class="button_encriptar" onclick="encriptar()">Encriptar</button>
                 <button class="button_desencriptar">Desencriptar</button>
             </div>
         </section>
-        <section class="second_section">b</section>
+        <section class="second_section">
+            <div id="animation_section">
+                <div class='animation-example'>
+                    <div class='item'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item -type2'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item -type2'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item -type2'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='item -type2'>
+                        <div class='line'></div>
+                        <div class='dot'></div>
+                        <div class='circle'></div>
+                    </div>
+                    <div class='center'>
+                        <div class='circle'></div>
+                        <div class='circle'></div>
+                        <div class='circle'></div>
+                    </div>
+                </div>
+            </div>
+            <div id="message_section" class="message_section">
+                <span id="texto_resultado"></span>
+                <button onclick="copiar()">Copiar</button>
+            </div>
+            <div id="not_found_message" class="not_found_message">
+                <img src="img/muñeco.png" alt="">
+                <div>
+                    <h2>Ningun mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
