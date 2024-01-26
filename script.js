@@ -6,6 +6,40 @@ const valores_encriptar = {
     'u': 'ufat'
 };
 
+const valores_desencriptar = [
+    {valor_inicial: 'enter',valor:'e', find: false},
+    {valor_inicial: 'imes',valor:'i', find: false},
+    {valor_inicial: 'ai',valor: 'a', find: false},
+    {valor_inicial: 'ober',valor: 'o', find: false},
+    {valor_inicial: 'ufat',valor: 'u', find: false}
+];
+
+const desencriptar = () => {
+    let textarea = document.getElementById('texto_textarea')
+    let texto_resultado = document.getElementById('texto_resultado')
+    validaciones_mensajes()
+    if (textarea.value.trim() === "") return
+    let texto = textarea.value;
+    let texto_desencriptado_cicle = true;
+    let contador = 0
+    let valores = valores_desencriptar;
+    while (texto_desencriptado_cicle) {
+        if (valores.length <= contador) {
+            texto_desencriptado_cicle = false
+            break
+        }
+        let inicial = texto.indexOf(valores[contador].valor_inicial)
+        if (inicial == -1) {
+            contador += 1
+            continue
+        }
+        let final = inicial + valores[contador].valor_inicial.length - 1;
+        let texto_cortar = texto.slice(0, inicial) + valores[contador].valor + texto.slice(final + 1)
+        texto = texto_cortar
+    }
+    texto_resultado.innerText = texto
+}
+
 const encriptar = () => {
     let textarea = document.getElementById('texto_textarea')
     let texto_resultado = document.getElementById('texto_resultado')
