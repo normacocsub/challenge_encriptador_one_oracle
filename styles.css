@@ -1,4 +1,12 @@
-
+.animation_section {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .button_section {
     display: flex;
     gap: 30px;
@@ -6,7 +14,22 @@
 
 body {
     background-color: #F3F5FC !important;
+    overflow: auto;
 }
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+
 
 .button_encriptar {
     height: 67px;
@@ -36,6 +59,10 @@ body {
     justify-content: center;
     padding: 4% 4px 20px 8%;
     gap: 40px;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        margin-top: 152px;
+    }
 }
 
 .copiar_section {
@@ -52,6 +79,11 @@ body {
 
 .first_section {
     width: 60%;
+    margin-top: 152px;
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        margin-top: 0px;
+    }
 }
 
 .input_section {
@@ -92,7 +124,21 @@ body {
     border: none;
     background-color: #F3F5FC;
     resize: none;
+    overflow: auto;
 }
+
+.input::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.input::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.input::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
 
 .message_section {
     display: none;
@@ -101,13 +147,33 @@ body {
     justify-content: space-between;
     height: 100%;
     font-size: 24px;
-    
+    @media screen and (max-width: 700px) {
+        gap: 40px;
+    }
 }
 
 .message_text {
     max-height: 61vh;
     overflow-y: auto;
+    width: 100%;
+    word-break: break-word;
+    overflow: auto;
 }
+
+
+.message_text::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.message_text::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+}
+
+.message_text::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+
 
 .message_section > button {
     height: 67px;
@@ -134,7 +200,13 @@ body {
     color: #495057;
     background-color: white;
     
-    
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        min-height: 400px;
+        padding: 2%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 }
 
 @keyframes sombraAnimacion {
