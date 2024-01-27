@@ -79,7 +79,7 @@ body::-webkit-scrollbar-track {
 
 .first_section {
     width: 60%;
-    margin-top: 152px;
+    margin-top: 102px;
     @media screen and (max-width: 700px) {
         width: 100%;
         margin-top: 0px;
